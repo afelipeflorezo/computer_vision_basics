@@ -18,6 +18,12 @@ Detección de rostros en imágenes estáticas y flujos de video utilizando clasi
 - **Técnicas:** Haar Feature-based Cascade Classifiers
 - **Documentación y uso:** Ver [reconocimiento_facial/README.md](reconocimiento_facial/README.md)
 
+### 3. [Detección de Color y Seguimiento de Objetos (HSV)](proyecto_deteccion_color/)
+Segmentación por color en espacio HSV, filtrado por máscaras y seguimiento de objetos delimitados por cajas contenedoras en imágenes estáticas, archivos de video y cámara web en tiempo real.
+- **Directorio:** `proyecto_deteccion_color/`
+- **Técnicas:** Espacio de color HSV, umbralización (`cv2.inRange`), máscaras binarias (`cv2.bitwise_and`), contornos y rectángulos delimitadores (`cv2.findContours`, `cv2.boundingRect`)
+- **Documentación y uso:** Ver [proyecto_deteccion_color/README.md](proyecto_deteccion_color/README.md)
+
 ---
 
 ## Estructura del Repositorio
@@ -36,13 +42,23 @@ computer_vision_basics/
 │       ├── edge_detection.py
 │       └── generate_sample_images.py
 │
-└── reconocimiento_facial/        # Módulo 2: Detección de rostros
+├── reconocimiento_facial/        # Módulo 2: Detección de rostros
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── data/                     # Fotos y videos de entrada
+│   ├── notebooks/                # Notebooks de exploración y pruebas
+│   ├── output/                   # Resultados con rostros delimitados
+│   └── src/
+│       ├── download_test_image.py
+│       └── face_detection.py
+│
+└── proyecto_deteccion_color/     # Módulo 3: Detección y seguimiento de color (HSV)
     ├── README.md
     ├── requirements.txt
-    ├── data/                     # Fotos y videos de entrada
-    ├── notebooks/                # Notebooks de exploración y pruebas
-    ├── output/                   # Resultados con rostros delimitados
+    ├── data/                     # Imágenes y videos de prueba
+    ├── notebooks/                # Notebooks de experimentación
+    ├── output/                   # Resultados con objetos delimitados y máscaras
     └── src/
-        ├── download_test_image.py
-        └── face_detection.py
+        ├── download_test_video.py
+        └── color_detection.py
 ```
