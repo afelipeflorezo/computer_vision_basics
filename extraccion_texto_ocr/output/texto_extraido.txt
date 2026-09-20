@@ -1,0 +1,3 @@
+--- DETECCION MORFOLOGICA DE TEXTO ---
+Lineas de texto detectadas en la imagen: 8
+Nota: Instala el motor Tesseract en tu sistema para decodificar caracteres alfabéticos.
